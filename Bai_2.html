@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .noidung {
+            background-color: rgb(239, 239, 239);
+            padding-top: 1.5rem;
+        }
+
+        .duongdan {
+            margin: auto;
+            width: 96%;
+            height: 2.5rem;
+            border: 1px solid gray;
+            line-height: 2.5rem;
+            padding-left: 1rem;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .tieude {
+            margin-top: 2rem;
+            padding-left: 2rem;
+            width: 98%;
+            height: 3rem;
+        }
+
+        .tieude>img {
+            width: auto;
+            height: 100%;
+        }
+
+        .tieude>span {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .back {
+            float: right;
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 4rem;
+        }
+
+        .back:hover {
+            color: crimson;
+            font-weight: bold;
+        }
+
+        .hang {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: 1rem;
+            padding-bottom: 1rem;
+                
+         }
+        
+        .trai {
+            width: 70%;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .de {
+            width: 100%;
+            height: 2rem;
+            background-color: rgb(195, 200, 200);
+            display: flex;
+            border: 1px solid rgb(197, 194, 194);
+            line-height: 1rem;
+        }
+
+        .items {
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            margin: auto;
+            text-align: center;
+        }
+
+        .items1 {
+            width: 15%;
+        }
+
+        .items2 {
+            width: 30%;
+            text-align: left;
+        }
+
+        .items3 {
+            width: 10%;
+        }
+
+        .items4 {
+            width: 10%;
+        }
+
+        .items5 {
+            width: 15%;
+        }
+
+        .items6 {
+            width: 10%;
+        }
+
+        .table {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid rgb(228, 228, 228);
+        }
+
+        /* =================== table ==================== */
+        .sp {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            border: 1px solid rgb(237, 237, 237);
+
+        }
+
+        .product {
+            width: 15%;
+            height: 100%;
+        }
+
+        .product>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .detail {
+            width: 40%;
+            height: 100%;
+            padding-top: 2rem;
+            padding-left: 2rem;
+        }
+
+        .bigdetail {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .detail>span {
+            font-weight: 600;
+        }
+
+        .trong {
+            width: 10%;
+            display: flex;
+
+        }
+        .trong > .trash{
+            margin: auto;
+        }
+        .trong>.trash img {
+            width: 30px;
+            height: 40px;
+            margin: auto;
+        }
+
+        .qnt {
+            width: 15%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+
+        }
+
+        .qnt>span,
+        .qnt>span>a {
+            text-decoration: none;
+            color: black;
+            margin: auto;
+            font-size: 1rem;
+            font-weight: bold;
+
+        }
+
+        .discount {
+            width: 20%;
+            height: 100%;
+            display: flex;
+        }
+
+        .total {
+            width: 10%;
+            height: 100%;
+            display: flex;
+        }
+
+        .discount .o0,
+        .total .o1 {
+            margin: auto;
+            font-weight: bold;
+        }
+
+        /* =========================================== */
+        .b {
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left,
+        .right {
+            width: 10rem;
+            height: 3rem;
+            background-color: rgb(2, 152, 102);
+            padding: auto;
+            color: aliceblue;
+            text-align: center;
+            line-height: 3rem;
+            font-weight: bold;
+        }
+        .left:hover,
+        .right:hover{
+            background-color: rgb(155, 73, 1);
+        }
+        .phai{
+            width: 28%;
+            height:100%;
+        }
+        .proceed{
+            width:90%;
+            height:3rem;
+            text-align: center;
+            line-height: 3rem;
+            background-color: rgb(1, 176, 129); 
+            margin: auto;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        .proceed:hover{
+            background-color: black;
+        }
+        .toltal{
+            
+            background-color: white;
+            width:90%;
+            margin: 2rem auto;
+            border: 1px solid rgb(209, 209, 209);
+            padding: 1rem;
+
+
+        }
+        .toltal > span {
+            float: right;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        hr{
+            width:98%;
+        }
+        .code{
+            width:70%;
+            height:2.5rem;
+            padding-left: 1rem;
+        }
+        .apply{
+            width: 20%;
+            float: right;
+            height:2.5rem;
+            background-color: rgb(10, 183, 10);
+            color: aliceblue;
+            border: none ;
+        }
+        .apply:focus{
+            border: none;
+        }
+        @media screen and (max-width: 900px) {
+            .hang{
+                flex-wrap: wrap;
+
+            }
+            .trai{
+                width:100%;
+
+            }
+            .phai{
+                width:100%;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="navigate">
+                <ul class="l">
+                    <li><a href="#">HELP</a></li>
+                    <li><a href="#">031546315</a></li>
+                </ul>
+                <ul class="r">
+                    <li><a href="#">MY ACCOUNT</a></li>
+                    <li><a href="#">SIGN IN</a></li>
+                    <li><a href="#">CREAT ACCOUNT</a></li>
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="index.html">HOME</a>
+                            <a class="nav-link" href="#">NEW PRODUCT</a>
+                            <a class="nav-link" href="#">SHOP</a>
+                            <a class="nav-link" href="#">PAGE LINK</a>
+                            <a class="nav-link" href="#">MY CART</a>
+                        </div>
+                        <form style="align-content: flex-end;" class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="noidung">
+            <div class="duongdan">Home / Menu / My Cart </div>
+            <div class="tieude">
+                <img src="cart-shopping-black.svg" alt="">
+                <span>&ensp;Shopping Cart</span>
+                <span><a class="back" href="index.html">>&ensp;Back to Shopping</a></span>
+            </div>
+            <div class="hang">
+                <div class="trai">
+                    <div class="de">
+                        <div class="items items1">PRODUCT</div>
+                        <div class="items items2">DETAIL</div>
+                        <div class="items items3"></div>
+                        <div class="items items4">QTN</div>
+                        <div class="items items5">DISCOUNT</div>
+                        <div class="items items6">TOTAL</div>
+                    </div>
+                    <div class="table">
+                        <div class="sp sp1">
+                            <div class="m product"><img src="anh1.jpg" alt=""></div>
+                            <div class="m detail">
+                                <p class="bigdetail">T-Shirts White </p>
+                                <span>12 x 1.5L</span>
+                                <br>
+                                <span>$2.99</span>
+                            </div>
+                            <div class="m trong">
+                                <div class="trash"><a href="#"><img src="trash-can.png" alt=""></a></div>
+                            </div>
+                            <div class="m qnt">
+                                <span><a href="#">-</a></span>
+                                <span>2</span>
+                                <span><a href="#">+</a></span>
+                            </div>
+                            <div class="m discount">
+                                <div class="o0">0</div>
+                            </div>
+                            <div class="m total">
+                                <div class="o1">$ 324</div>
+                            </div>
+                        </div>
+                        <div class="sp sp2">
+                            <div class="m product"><img src="anh1.jpg" alt=""></div>
+                            <div class="m detail">
+                                <p class="bigdetail">T-Shirts White </p>
+                                <span>12 x 1.5L</span>
+                                <br>
+                                <span>$2.99</span>
+                            </div>
+                            <div class="m trong">
+                                <div class="trash"><a href="#"><img src="trash-can.png" alt=""></a></div>
+                            </div>
+                            <div class="m qnt">
+                                <span><a href="#">-</a></span>
+                                <span>2</span>
+                                <span><a href="#">+</a></span>
+                            </div>
+                            <div class="m discount">
+                                <div class="o0">0</div>
+                            </div>
+                            <div class="m total">
+                                <div class="o1">$ 324</div>
+                            </div>
+                        </div>
+                        <div class="sp sp3">
+                            <div class="m product"><img src="anh1.jpg" alt=""></div>
+                            <div class="m detail">
+                                <p class="bigdetail">T-Shirts White </p>
+                                <span>12 x 1.5L</span>
+                                <br>
+                                <span>$2.99</span>
+                            </div>
+                            <div class="m trong">
+                                <div class="trash"><a href="#"><img src="trash-can.png" alt=""></a></div>
+                            </div>
+                            <div class="m qnt">
+                                <span><a href="#">-</a></span>
+                                <span>2</span>
+                                <span><a href="#">+</a></span>
+                            </div>
+                            <div class="m discount">
+                                <div class="o0">0</div>
+                            </div>
+                            <div class="m total">
+                                <div class="o1">$ 324</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="left">Continue Shopping</div>
+                        <div class="right">Update Cart</div>
+                    </div>
+                </div>
+                <div class="phai">
+                    <div class="proceed">Proceed To Checkout</div>
+                    <div class="toltal">
+                        Total product <span>$ 212.8</span> <hr>
+                        Shipping <span style=" font-size: 1.5rem; color: chartreuse; font-weight: bold;">Free Shipping</span> <hr>
+                        Total (tax ectl ) <span>$ 212.8</span> <hr>
+                        Total Tax <span>$ 0.00 </span> <hr>
+                        Total <span style="color: rgb(73, 243, 61); font-size: 1.5rem;">$ 212.8</span> <hr>
+                        <input class="code" style="font-size: 1.2rem; font-weight: bold;" type="text" placeholder="Cupon Code"> <input class="apply" style="font-weight: bold;" type="button" value="Apply !">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <h1>Support</h1>
+                <hr>
+                <p><a href="#">43552107037</a></p>
+                <p><a href="#">ahgsdgf@gamil.com</a></p>
+
+            </div>
+            <div class="col-sm-2">
+                <h1>Shop</h1>
+                <hr>
+                <p><a href="#">Men</a></p>
+                <p><a href="#">Woman</a></p>
+                <p><a href="#">Kids</a></p>
+                <p><a href="#">Shoes</a></p>
+                <p><a href="#">Gift card</a></p>
+            </div>
+            <div class="col-sm-3">
+                <h1>Information</h1>
+                <hr>
+                <p><a href="#">Questions</a></p>
+                <p><a href="#">Status</a></p>
+                <p><a href="#">Contact Us</a></p>
+                <p><a href="#">Return Poliocs</a></p>
+                <p><a href="#">Sizing Chaerts</a></p>
+            </div>
+            <div class="col-sm-2">
+                <h1>Account</h1>
+                <hr>
+                <p><a href="#">Account</a></p>
+                <p><a href="#">Email</a></p>
+                <p><a href="#">Wish List</a></p>
+                <p><a href="#">Old List </a></p>
+                <p><a href="#">Old Status</a></p>
+            </div>
+            <div class="col-sm-3">
+                <h1>Stay In Ouncht</h1>
+                <hr>
+                <div class="email"><a href="#">Email</a></div>
+                <div class="sub"><a href="#">Subscriber</a></div>
+                <div class="icon">
+                    <img src="facebook.svg" alt=""><img src="instagram.svg" alt=""><img src="twitter.svg" alt="">
+                    <img src="facebook.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
